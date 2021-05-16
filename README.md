@@ -18,26 +18,24 @@ FastRTPS_1.5.0.patch  Fast-RTPS-1.5.0.tar.gz  gflags-2.2.0.tar.gz  glog-0.3.5.ta
 2. build dependencies
 
 ```
-mkdir build
-cd build
-cmake ..
-make
+mkdir <build_dir>
+cd <build_dir>
+cmake .. -DCMAKE_INSTALL_PREFIX=<desired path to install cyberrt>
+make -j$(nproc)
 ```
 
-3. build cyber-rt lite
+3. build cyber-rt python wrapper
 
 ```
-cmake ..
-scripts/genprotosrc.sh 
-make
-
+./scripts/genprotosrc.sh <build_dir>
+cd <build_dir>
 ```
 
 4. run examples
 
 ```
-cyber-rt/build$ cyber/examples/cyber_example_talker
-cyber-rt/build$ cyber/examples/cyber_example_listener
+cyber-rt/<build_dir>$ cyber/examples/cyber_example_talker
+cyber-rt/<build_dir>$ cyber/examples/cyber_example_listener
 ```
 
 Note:
