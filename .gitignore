@@ -1,4 +1,12 @@
 *.o
+*.a
+*.so
 *.swp
-build/
-tmp/
+*.pb.cc
+*.pb.h
+py_proto
+tmp
+*.tgz
+*.zip
+*.tar
+*.tar.gz
